@@ -24,7 +24,7 @@ const Peoples = ({ peoples }) => {
         <div className="people" key={people.id}>
           <div>Name : {people.name}</div>
           <div>Age : {people.age}</div>
-          <div>Belt: {people.belt}</div>
+          <div>Belt: {people.belt}</div><br/>
         </div>
     ) : null
   })}

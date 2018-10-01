@@ -26,6 +26,14 @@ class App extends Component {
       }
     ]
   };
+
+  addPeople = (people) =>{
+    people.id = Math.random()
+    let peoples= [...this.state.peoples, people]
+    this.setState({
+      peoples:peoples
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -34,7 +42,7 @@ class App extends Component {
           <p>I'M BACK !!</p>
           <Peoples peoples={this.state.peoples} />
           <br/>
-          <AddPeople />
+          <AddPeople addPeople={this.addPeople}/>
         </Container>
       </div>
     );

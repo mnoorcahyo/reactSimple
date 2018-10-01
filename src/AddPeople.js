@@ -12,9 +12,10 @@ class AddPeople extends Component {
       [e.target.id]: e.target.value
     });
   };
-  handleSubmit = (e) =>{
+
+  handleSubmit = (e) => {
       e.preventDefault()
-      console.log(this.state)
+      this.props.addPeople(this.state)
   }
 
   render() {
