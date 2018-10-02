@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
+import "./People.css"
 
 const Peoples = ({ peoples, deletePeople }) => {
   // const peoplelist = peoples.map(people => {
@@ -26,8 +27,7 @@ const Peoples = ({ peoples, deletePeople }) => {
           <div>Name : {people.name}</div>
           <div>Age : {people.age}</div>
           <div>Belt: {people.belt}</div>
-          <Button type='submit' onClick={() => {deletePeople(people.id)}}>Delete</Button>
-          <br/>
+          <Button type='submit' onClick={() => {deletePeople(people.id)}}>Delete</Button><br/>
         </div>
     ) : null
   })}
