@@ -1,6 +1,7 @@
 import React from "react";
+import { Button } from "semantic-ui-react";
 
-const Peoples = ({ peoples }) => {
+const Peoples = ({ peoples, deletePeople }) => {
   // const peoplelist = peoples.map(people => {
   //   if(people.age > 20) {
   //     return (
@@ -24,7 +25,9 @@ const Peoples = ({ peoples }) => {
         <div className="people" key={people.id}>
           <div>Name : {people.name}</div>
           <div>Age : {people.age}</div>
-          <div>Belt: {people.belt}</div><br/>
+          <div>Belt: {people.belt}</div>
+          <Button type='submit' onClick={() => {deletePeople(people.id)}}>Delete</Button>
+          <br/>
         </div>
     ) : null
   })}

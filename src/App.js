@@ -34,13 +34,23 @@ class App extends Component {
       peoples:peoples
     })
   }
+
+  deletePeople = (id) =>{
+    let peoples = this.state.peoples.filter(people =>{
+      return people.id!==id
+    })
+    this.setState({
+      peoples:peoples
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Container text>
           <h1>Hello Dude</h1>
           <p>I'M BACK !!</p>
-          <Peoples peoples={this.state.peoples} />
+          <Peoples deletePeople={this.deletePeople} peoples={this.state.peoples} />
           <br/>
           <AddPeople addPeople={this.addPeople}/>
         </Container>
